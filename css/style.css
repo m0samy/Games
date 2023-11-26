@@ -1,0 +1,83 @@
+:root {
+    --main-color: #3a497b;
+    --sconde-color: #09c;
+    --therd-color: #3e4249;
+    --forth-color: #32383E;
+}
+body {
+    font-family: "Comfortaa", cursive;
+    background-color: var(--therd-color);
+    color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.bg-main-color {
+    background-color: var(--main-color);
+}
+.bg-span {
+    background-color: var(--forth-color);
+    padding: 10px 10px;
+}
+/*start navbar*/
+.nav-link {
+    transition: color 0.5s;
+}
+
+.nav-link:hover {
+    color: var(--sconde-color);
+}
+/*end navbar*/
+
+#xmark , .games 
+{
+    cursor: pointer;
+}
+.games {
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.5;
+}
+
+.games:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/*start loading*/
+#loading
+{
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
+}
+.lds-dual-ring {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* width: 80px;
+    height: 80px; */
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+/*end loading*/
